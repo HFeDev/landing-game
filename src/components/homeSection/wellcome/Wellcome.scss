@@ -1,0 +1,46 @@
+@use "../../../scss/" as *;
+
+
+.wellcome{
+
+  &__content{
+    @include flex(center,center);
+  }
+
+  &__infor,&__img{
+      width: 50%;
+      height: 100%;
+  }
+
+  &__infor{
+    
+    @include flex(flex-start , flex-end);
+    
+    &_content{
+      padding-left: 15rem; 
+
+      .wellcome__description{
+        font-size: 1rem;
+      }
+
+      .btns > * ~ *{
+        margin-left: 1rem;
+      }
+    }
+
+ }
+
+  &__img{
+    @include flex(flex-end, flex-start);
+
+    &__slide{
+      height : 555px;
+      width: 555px;
+      overflow: hidden;
+
+      & >img{
+        width: 100%;
+      }
+    }
+  }
+}
